@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+
+int variable(int x, int y)
+{
+    int temp;
+    
+    temp=x;
+    
+    x=y;
+    y=temp;
+    
+    printf("x= %d ", x);
+    printf("y= %d ", temp);
+    printf("\n******** \n");
+    
+}
+
+int pointerVariable(int *x, int *y)
+{
+    int temp;
+    
+    temp= *x;
+    
+    *x= *y;
+    *y= temp;  
+    
+}
+
+
+int main()
+{
+      int x=3;
+      int y=5;
+  
+    variable(x,y);
+    
+    pointerVariable(&x,&y);
+    
+    printf("x= %d ", x);
+    printf("y= %d ", y);
+    
+    return 0;
+}
